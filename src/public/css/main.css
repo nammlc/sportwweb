@@ -326,7 +326,22 @@ label {
 .nam_new-hot {
   position: relative;
   display: block;
-  background-color: #e1e1d9eb; }
+  background-color: #e1e1d9eb;
+  overflow: hidden;
+  width: 1000px; }
+
+@keyframes slideimg {
+  from {
+    left: 0; }
+  to {
+    left: -1000px; } }
+
+.nam_new-hot .nam_new-hot--slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: slideimg linear 1s; }
 
 .nam_new-hot__header {
   display: block;
