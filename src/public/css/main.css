@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #my-header {
   position: sticky;
   top: 0; }
@@ -236,19 +237,19 @@ label {
   margin-left: 60px; }
 
 .nam_slider__name {
-  font-size: 2.5rem;
-  color: #326ce0; }
+  font-size: 4rem;
+  color: #b5b7bb; }
 
 .nam_category {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .nam_category-list {
   list-style: none;
   padding: 0 10px;
   background-color: var(--white-color);
   text-align: center;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px; }
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; }
 
 .nam_category-item-link {
   text-decoration: none;
@@ -356,14 +357,31 @@ label {
   color: #326ce0; }
 
 .nam_new-side {
-  height: 500px;
-  overflow: scroll; }
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden; }
 
 .nam_new-side-list {
   list-style: none;
   background-color: var(--white-color);
   padding: 0 10px;
   border-radius: 2px; }
+
+.nam_new-side::-webkit-scrollbar {
+  width: 6px;
+  /* Chiều rộng vùng chứa scrollbar */ }
+
+.nam_new-side::-webkit-scrollbar-track {
+  background: #e8e6e6;
+  border-radius: 5px;
+  /* Màu nền ngoài của thanh scrollbar */ }
+
+.nam_new-side::-webkit-scrollbar-thumb {
+  background-color: rgba(129, 121, 121, 0.8);
+  /* Màu của thanh cuộn (scroll thumb) */
+  border-radius: 5px;
+  /* Bo góc scroll thumb */
+  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */ }
 
 .nam_new-side-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
@@ -564,7 +582,8 @@ label {
 
 /* footer */
 .nam_footer {
-  cursor: default; }
+  cursor: default;
+  color: #d2d2cd; }
 
 .nam_contact__list {
   padding: 0;
@@ -582,10 +601,10 @@ label {
   text-decoration: none;
   font-size: 1.3rem;
   width: 100%;
-  color: #333333; }
+  color: white; }
 
 .nam_contact__item :hover {
-  color: rgba(51, 51, 51, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 
 .nam_social__media {
   list-style-type: none;
@@ -602,10 +621,10 @@ label {
   display: block;
   text-decoration: none;
   font-size: 1.3rem;
-  color: #333333; }
+  color: white; }
 
 .nam_social__media--link:hover {
-  color: rgba(51, 51, 51, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 
 .nam_social__media--link-icon {
   margin-right: 3px;
@@ -626,10 +645,10 @@ label {
   text-decoration: none;
   font-size: 1.3rem;
   width: 100%;
-  color: #333; }
+  color: white; }
 
 .nam_partners__link:hover {
-  color: rgba(51, 51, 51, 0.8); }
+  color: rgba(255, 255, 255, 0.8); }
 
 .nam_information {
   padding: 0;
@@ -643,7 +662,7 @@ label {
   margin-bottom: 5px;
   font-size: 1.3rem;
   width: 100%;
-  color: #333; }
+  color: #bdb8b8; }
 
 .nam_soccer-schedule {
   width: 100%;
