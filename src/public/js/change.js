@@ -1,3 +1,5 @@
+
+// chane attribute of header
 const header = document.getElementById('my-header');
 const body = document.getElementById('body');
 const slider = document.getElementById('my-slider');
@@ -11,3 +13,7 @@ window.addEventListener('scroll',function(){
         slider.style.marginBottom= 0;
     }
 });
+
+
+
+
