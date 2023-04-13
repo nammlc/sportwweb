@@ -8,6 +8,10 @@
                 <div class="nam_container_web">
                     <div class="nam_grid">
                         <div class="nam_grid__row">
+                            <div class="nam_grid__row-body">
+                                <h1 style="margin: 10px 0 10px 0"> <img src="https://wwwimage-us.pplusstatic.com/base/files/seo/ucl_social_1200x627.jpg" alt="" width="200px" height="100px"> Champion League </h1>
+                                <h2 id="getTime"></h2>
+                            </div>
                             <div class="nam_middle" style="display:flex ; justify-content:space-between ; ">
                                 <div class="nam_new-mid">
                                     <div class="nam_new-mid--header">
@@ -25,10 +29,26 @@
                                         </div>
                                     </div>
                                     <div class="nam_new-mid--news">
-                                        vùng cơ sở dữ liệu Champion Leagues
+                                        <div class="nam_new-mid--news-head">
+                                            <h1>vùng cơ sở dữ liệu Champion Leagues</h1>
+                                        </div>
+                                        <div class="nam_new-mid--news-body" style="display: flex; flex-wrap : wrap;">
+                                            {{#each c1}}
+                                                <a href="/c1/{{this.slug}}">
+                                                    <div class="card" style="width: 25%; margin-bottom :5px">
+                                                        <img src="{{this.img1}}" class="card-img-top" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Card title</h5>
+                                                            <p class="card-text">{{this.summary}}</p>
+                                                            <a href="/c1/{{this.slug}}" class="btn btn-primary">GO</a>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            {{/each}}
+                                        </div>
                                     </div>
                                     <div class="nam_new-mid--rank" >
-                                        <h1>Bảng xếp hạng</h1>
+                                        <h1 class="nam_new-mid--rank-title">Bảng xếp hạng</h1>
                                         <table class="table" style="font-size: 1.4rem ">
                                             <thead>
                                                 <tr>
@@ -41,99 +61,287 @@
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">1</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
                                                     <td>Otto</td>
                                                     <td>@mdo</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/UXcqj7HG-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
                                                     <td>Thornton</td>
                                                     <td>30</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">3</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/nwSRlyWg-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
+                                                    <td>Thornton</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                 <tr>
+                                                    <th scope="row">1</th>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/UXcqj7HG-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
                                                     <td>Thornton</td>
                                                     <td>30</td>
                                                 </tr>
                                                 <tr>
+                                                    <th scope="row">3</th>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/nwSRlyWg-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
+                                                    <td>Thornton</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                 <tr>
+                                                    <th scope="row">1</th>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
                                                     <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/UXcqj7HG-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
                                                     <td>Thornton</td>
                                                     <td>30</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
+                                                    <th scope="row">3</th>
+                                                    <td><img src="https://www.flashscore.com/res/image/data/nwSRlyWg-4CIh5uRh.png" height="25px" width="25px" style="margin-right : 5px">Arsenal</td>
                                                     <td>Thornton</td>
                                                     <td>30</td>
                                                 </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
-                                                    <td>Thornton</td>
-                                                    <td>30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
-                                                    <td>Thornton</td>
-                                                    <td>30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
-                                                    <td>Thornton</td>
-                                                    <td>30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
-                                                    <td>Thornton</td>
-                                                    <td>30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><img src="https://www.flashscore.com/res/image/data/pfchdCg5-4CIh5uRh.png" height="25px" width="25px">Mark</td>
-                                                    <td>Thornton</td>
-                                                    <td>30</td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="nam_new-mid--relate">
-                                        <div class="nam_new-mid--relate__img">
-                                            <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="">
+                                        <h1>Tin liên quan</h1>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="nam_new-mid--relate__des">
-                                            <a href="" class="nam_new-mid--relate__des-title">
-                                                Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
-                                            </a>
-                                            <div class="nam_new-mid--relate__des-summary">
-                                                Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nam_new-mid--relate__body">
+                                            <div class="nam_new-mid--relate__img">
+                                                <a href="">
+                                                    <img src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg" alt="" width="250px" height="150px">
+                                                </a>
+                                            </div>
+                                            <div class="nam_new-mid--relate__des">
+                                                <a href="" class="nam_new-mid--relate__des-title">
+                                                    Trực tiếp Man City vs Bayern, 2h00 ngày 12/04
+                                                </a>
+                                                <div class="nam_new-mid--relate__des-summary">
+                                                    Trực tiếp Man City đấu với Bayern Munich - Trận cầu tâm điểm tứ kết Cúp C1 hứa hẹn sẽ là một bữa tiệc bóng đá tấn công tưng bừng với sự góp mặt của hai đội bóng mạnh nhất châu Âu.
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="nam_new_right" >
                                     <div class="top-goals">
-                                        <h1>Vua phá lưới</h1>
+                                        <h1 style="border-bottom: 1px solid;">Vua phá lưới</h1>
                                         <div class="top-one-goals">
                                             <div class="top-one-goals-name">
-                                                Erling Halland
-                                            </div>
-                                            <div class="top-one-goals-score">
-                                                30
+                                                <img src="https://mega.com.vn/media/news/0610_anh-nen-haaland-mc5.jpg" alt="" width="100%" height="450px">
+                                                <table class="table-rank">
+                                                    <tr>
+                                                        <td class='table-num' style="font-weight: 500; font-size : 1.6rem">
+                                                            1
+                                                            
+                                                        </td>
+                                                        <td class=" table-name" style="font-size: 2rem; font-weight : 1000">
+                                                            <h2 style="font-size: 2rem;">
+                                                                <i class="fa-solid fa-crown" style="color: rgb(90, 90, 39);"></i>
+                                                            </h2>
+                                                            Erling Halland
+                                                             <h1>
+                                                            Manchester City
+                                                            </h1>
+                                                        </td>
+                                                        <td class="table-score" style="font-size: 1.7rem; font-weight: 500">
+                                                            30
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                         <div class="top-goals-mem">
-                                            <div class="top-goals-mem-name">
-                                                Harry Kane
-                                            </div>
-                                            <div class="top-goals-mem-score">
-                                                23
-                                            </div>
+                                            <table class="table-rank">
+                                                 <tr>
+                                                    <td class="table-num">2</td>
+                                                    <td class="table-name"> Cristiano Ronaldo
+                                                         <h1>
+                                                            Manchester United
+                                                        </h1>
+                                                    </td>
+                                                    <td class="table-score">25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-num">3</td>
+                                                    <td class="table-name"> Bakayo Saka
+                                                        <h1>
+                                                            Arsenal
+                                                        </h1>
+                                                    </td>
+                                                    <td class="table-score">20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="table-num">4</td>
+                                                    <td class="table-name"> Harry Kane
+                                                         <h1>
+                                                            Tottenham
+                                                        </h1>
+                                                    </td>
+                                                    <td class="table-score">30</td>
+                                                </tr>
+                                            </table>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="nam_new_right--link">
+                                        <div class="dropdown" >
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1.4rem; ">
+                                                        Liên kết <i class="fa-solid fa-link"></i>
+                                                    </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="font-size: 1.2rem; ">
+                                                <li><a class="dropdown-item" href="https://www.premierleague.com">.premierleague.com</a></li>
+                                                <li><a class="dropdown-item" href="https://www.uefa.com/">uefa.com</a></li>
+                                                <li><a class="dropdown-item" href="https://www.facebook.com/lecongnam0604/">facebook cá nhân</a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>

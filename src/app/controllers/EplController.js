@@ -1,13 +1,18 @@
-const Worldsoccer = require('../models/World');
+const Epl = require('../models/epl');
 class NewsController {
     
     //[GET] / 
     show(req,res,next){
-        Worldsoccer.find().lean()
-            .then(worldsoccer => res.render('Epl',{worldsoccer}))
+        Epl.find().lean()
+            .then(epl => res.render('Epl',{epl}))
             .catch(next);
     }
     //[GET] /news/:slug
+    render(req,res,next){
+        Epl.findOne({slug : req.params.slug}).lean()
+            .then(epl => res.render('course/showepl',{epl}))
+            .catch(next)
+    }
 }
 
 module.exports = new NewsController;

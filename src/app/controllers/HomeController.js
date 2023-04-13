@@ -1,7 +1,4 @@
 const Course = require('../models/Course');
-const { index } = require('./ChampionLeagueController');
-
-const Worldsoccer = require('../models/World');
 
 class SiteController {
 

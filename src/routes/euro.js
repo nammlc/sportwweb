@@ -8,6 +8,9 @@ const EuroController = require('../app/controllers/EuroController');
 // router.get('/:id/edit', EuroController.edit);
 // router.put('/:id', EuroController.update);
 // router.delete('/:id', EuroController.delete);
-router.get('/:slug', EuroController.show);
+
+router.get('/Euro',EuroController.show);
+router.get('/:slug', EuroController.render);
+
 
 module.exports = router;
