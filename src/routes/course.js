@@ -9,10 +9,6 @@ const c1Controller = require('../app/controllers/ChampionLeagueController');
 // router.get('/:id/edit', courseController.edit);
 // router.put('/:id', courseController.update);
 // router.delete('/:id', courseController.delete);
-
-router.get('/:slug', c1Controller.render);
-
-
-
+router.get('/:slug', courseController.show);
 
 module.exports = router;
