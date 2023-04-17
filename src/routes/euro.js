@@ -10,6 +10,11 @@ const EuroController = require('../app/controllers/EuroController');
 // router.delete('/:id', EuroController.delete);
 
 router.get('/Euro',EuroController.show);
+
+router.get('/create',EuroController.create);
+
+router.post('/store',EuroController.store);
+
 router.get('/:slug', EuroController.render);
 
 

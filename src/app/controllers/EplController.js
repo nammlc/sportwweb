@@ -13,6 +13,20 @@ class NewsController {
             .then(epl => res.render('course/showepl',{epl}))
             .catch(next)
     }
-}
+    create(req,res,next){
+        res.render('course/create');
+     }
+ 
+     //store
+     store(req,res,next){
+         const epl = new Epl(req.body);
+         epl.save()
+            .then(() => res.redirect('/epl/Epl'))
+            .catch(error =>{
+
+            });
+      }
+    }
+
 
 module.exports = new NewsController;

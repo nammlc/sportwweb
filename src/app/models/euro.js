@@ -20,4 +20,4 @@ const euros = new Schema({
     timestamps: true,
 })
 
-module.exports = mongoose.model('euros',euros);
+module.exports = mongoose.model('euro',euros);

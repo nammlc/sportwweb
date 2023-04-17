@@ -6,7 +6,7 @@ mongoose.plugin(slug);
 
 const Schema = mongoose.Schema;
 
-const epls = new Schema({
+const epl = new Schema({
     name :{ type : String},
     phara1:{type : String},
     phara2:{type : String},
@@ -20,4 +20,4 @@ const epls = new Schema({
     timestamps: true,
 })
 
-module.exports = mongoose.model('epls',epls);
+module.exports = mongoose.model('epl',epl);

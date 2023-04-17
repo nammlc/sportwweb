@@ -10,6 +10,10 @@ const ChampionLeagueController = require('../app/controllers/ChampionLeagueContr
 // router.delete('/:id', ChampionLeagueController.delete);
 router.get('/Champion-League',ChampionLeagueController.show);
 
+router.get('/create',ChampionLeagueController.create);
+
+router.post('/store',ChampionLeagueController.store);
+
 router.get('/:slug', ChampionLeagueController.render);
 
 

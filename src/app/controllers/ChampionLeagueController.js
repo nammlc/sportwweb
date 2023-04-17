@@ -15,6 +15,21 @@ class NewsController {
             })
             .catch(next);
     }
-}
 
-module.exports = new NewsController;
+    create(req,res,next){
+        res.render('course/create');
+     }
+ 
+     //store
+     store(req,res,next){
+         const C1 = new c1(req.body);
+         C1.save()
+            .then(() => res.redirect('/c1/Champion-League'))
+            .catch(error =>{
+
+            });
+      }
+    }
+
+
+module.exports = new NewsController();
