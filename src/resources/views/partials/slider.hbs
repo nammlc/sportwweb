@@ -7,7 +7,16 @@
             </h1>
         </a>
         <div class="sign-in__sign-out" id="sign-in__sign-out">
-            <button class="btn-slide" id="admin"><a href="/c1/create">Admin</a></button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color :transparent ; border : none ; font-size : 1.4rem">
+                    Admin
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="font-size : 1.4rem">
+                    <li><a class="dropdown-item" href="/c1/create">Đăng bài viết</a></li>
+                    <li><a class="dropdown-item" href="/admin/stored-db">Bài viết</a></li>
+                    <li><a class="dropdown-item" href="">Tài khoản của Admin</a></li>
+                </ul>
+            </div>
             <button class="btn-slide" id="signIn">Đăng nhập</button>
             <button class="btn-slide" id="signUp">Đăng ký</button>
 

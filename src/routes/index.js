@@ -15,8 +15,10 @@ const liveRouter = require('./live');
 
 const laligaRouter = require('./laliga');
 
+const adminRouter= require('./admin');
 
 function route(app){
+    app.use('/admin',adminRouter);
     app.use('/laliga',laligaRouter);
     app.use('/epl', eplRouter);
     app.use('/live', liveRouter);

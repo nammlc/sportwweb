@@ -1,0 +1,26 @@
+<div class="mt-4" style="color: aliceblue;">
+    <table class="table" style="color: aliceblue;">
+        <thead>
+            <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Ảnh</th>
+            <th scope="col">Tóm tắt</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each c1}}
+            <tr>
+            <th scope="row">{{ sum @index 1}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.img1}}</td>
+            <td>{{this.summary}}</td>
+            <td>
+                <a href="/c1/{{this._id}}/edit">Sửa</a>
+                <a href="/c1/{{this._id}}/delete">Xóa</a>
+            </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>    
+</div>

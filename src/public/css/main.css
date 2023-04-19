@@ -173,7 +173,8 @@
   color: #b5b7bb; }
 
 .sign-in__sign-out {
-  margin-right: 220px; }
+  margin-right: 220px;
+  display: flex; }
 
 .btn-slide {
   border: none;

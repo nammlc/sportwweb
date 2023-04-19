@@ -14,6 +14,10 @@ router.get('/create',ChampionLeagueController.create);
 
 router.post('/store',ChampionLeagueController.store);
 
+router.get('/:id/edit',ChampionLeagueController.edit);
+
+router.put('/:id',ChampionLeagueController.update);
+
 router.get('/:slug', ChampionLeagueController.render);
 
 

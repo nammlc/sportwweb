@@ -10,6 +10,7 @@ const LaligaController = require('../app/controllers/LaligaController');
 // router.delete('/:id', ChampionLeagueController.delete);
 
 router.get('/Laliga',LaligaController.show);
+
 router.get('/create',LaligaController.create);
 
 router.post('/store',LaligaController.store);
