@@ -13,9 +13,6 @@ class NewsController {
             .then(euro => res.render('course/showeuro',{euro}))
             .catch(next);
     }
-    create(req,res,next){
-        res.render('course/create');
-     }
  
      //store
      store(req,res,next){

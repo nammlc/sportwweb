@@ -1,5 +1,5 @@
 
-const championleagueRouter = require('./championleague');
+const c1Router = require('./c1');
 
 const coursesRouter = require('./course');
 
@@ -23,7 +23,7 @@ function route(app){
     app.use('/epl', eplRouter);
     app.use('/live', liveRouter);
     app.use('/euro', euroRouter);
-    app.use('/c1', championleagueRouter);
+    app.use('/c1', c1Router);
     app.use('/courses',coursesRouter);
     app.use('/worldsoccer',worldRouter);
     app.use('/',siteRouter);

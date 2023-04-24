@@ -14,12 +14,7 @@ class NewsController {
                 res.render('course/worldshow',{c1});
             })
             .catch(next);
-    }
-
-    create(req,res,next){
-        res.render('course/create');
-    }
- 
+        }
      //store
      store(req,res,next){
         const ChampionLeague = new c1(req.body);
@@ -30,19 +25,19 @@ class NewsController {
            });
      }
     
-    edit(req,res,next){
-        c1.findById(req.params.id).lean()
-            .then(c1 => res.render('course/update',{c1}))
-            .catch(next);
+    // edit(req,res,next){
+    //     c1.findById(req.params.id).lean()
+    //         .then(c1 => res.render('course/update',{c1}))
+    //         .catch(next);
+    // }
+
+    // update(req,res,next){
+    //     c1.updateOne({_id: req.params.id},req.body)
+    //         .then(() => res.redirect('/admin/Stored-db'))
+    //         .catch(next);
+    //     }
+
+    // }
+
     }
-
-    update(req,res,next){
-        c1.updateOne({_id: req.params.id},req.body)
-            .then(() => res.redirect('/admin/Stored-db'))
-            .catch(next);
-        }
-
-    }
-
-
 module.exports = new NewsController();
