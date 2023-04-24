@@ -13,6 +13,4 @@ const AdminController = require('../app/controllers/AdminController');
 
 router.get('/stored-db',AdminController.show);
 
-router.get('/delete',AdminController.delete);
-
 module.exports = router;

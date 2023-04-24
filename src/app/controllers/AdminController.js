@@ -22,11 +22,6 @@ class NewsController {
             .catch(next);
         }
 
-    delete(req,res,next){
-        c1.find().lean()
-        .then(c1 => res.render('admin/stored-db',{c1}))
-        .catch(next);
-    }
     }
 
 

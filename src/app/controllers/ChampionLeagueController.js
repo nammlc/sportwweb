@@ -18,17 +18,17 @@ class NewsController {
 
     create(req,res,next){
         res.render('course/create');
-     }
+    }
  
      //store
      store(req,res,next){
-         const C1 = new c1(req.body);
-         C1.save()
-            .then(() => res.redirect('/c1/Champion-League'))
-            .catch(error =>{
+        const ChampionLeague = new c1(req.body);
+        ChampionLeague.save()
+           .then(() => res.redirect('/c1/Champion-League'))
+           .catch(error =>{
 
-            });
-      }
+           });
+     }
     
     edit(req,res,next){
         c1.findById(req.params.id).lean()
