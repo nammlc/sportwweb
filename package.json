@@ -9,7 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node-sass --watch src/resources/scss/main.scss src/public/css/main.css",
     "watchBase": "node-sass --watch src/resources/scss/base.scss src/public/css/base.css"
-
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^7.0.4",
     "method-override": "^3.0.0",
-    "mongoose": "^7.0.3",
+    "mongoose": "^6.10.4",
     "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {

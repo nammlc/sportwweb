@@ -7,6 +7,10 @@ router.get('/Epl', EplController.show);
 
 router.post('/store',EplController.store);
 
+router.get('/edit',EplController.edit);
+
+router.put('/update',EplController.update);
+
 router.get('/:slug',EplController.render);
 
 module.exports = router;

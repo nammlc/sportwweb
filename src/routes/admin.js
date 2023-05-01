@@ -5,4 +5,6 @@ const AdminController = require('../app/controllers/AdminController');
 
 router.get('/create',AdminController.create);
 
+router.get('/stored-db',AdminController.show);
+
 module.exports = router;

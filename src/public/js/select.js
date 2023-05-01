@@ -2,6 +2,7 @@ const select = document.getElementById('select');
 const form = document.getElementById('form-create');
 select.addEventListener('change',function(){
     const selectOptition = select.value;
+    console.log(selectOptition);
     form.innerHTML = `
         <form action="/${selectOptition}/store" method="post">
 

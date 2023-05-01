@@ -23,6 +23,18 @@ class NewsController {
 
             });
       }
+
+      edit(req,res,next){
+        epl.findById(req.params.id).lean()
+            .then(epl => res.render('course/update',{epl}))
+            .catch(next);
+    }
+
+    update(req,res,next){
+        epl.updateOne({_id: req.params.id},req.body)
+            .then(() => res.redirect('/admin/Stored-db'))
+            .catch(next);
+        }
     }
 
 

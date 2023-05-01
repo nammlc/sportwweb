@@ -1,13 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const ChampionLeagueController = require('../app/controllers/C1Controller');
+const C1Controller = require('../app/controllers/C1Controller');
 
-router.get('/ChampionLeague', ChampionLeagueController.show);
+router.get('/Champion-League', C1Controller.show);
 
+router.post('/store',C1Controller.store);
 
-router.post('/store',ChampionLeagueController.store);
+router.get('/:id/edit',C1Controller.edit);
 
-router.get('/:slug',ChampionLeagueController.render);
+router.put('/:id',C1Controller.update);
+
+router.get('/:slug',C1Controller.render);
 
 module.exports = router;

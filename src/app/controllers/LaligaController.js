@@ -16,7 +16,7 @@ class NewsController {
     }
  
      //store
-     store(req,res,next){
+    store(req,res,next){
          const laliga = new Laliga(req.body);
          laliga.save()
             .then(() => res.redirect('/laliga/Laliga'))
@@ -24,6 +24,17 @@ class NewsController {
 
             });
       }
+    edit(req,res,next){
+        Laliga.findById(req.params.id).lean()
+            .then(laliga => res.render('course/update',{laliga}))
+            .catch(next);
+    }
+
+    update(req,res,next){
+        Laliga.updateOne({_id: req.params.id},req.body)
+            .then(() => res.redirect('/admin/Stored-db'))
+            .catch(next);
+        }
     }
 
 module.exports = new NewsController;

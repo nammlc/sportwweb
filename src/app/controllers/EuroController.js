@@ -23,6 +23,17 @@ class NewsController {
 
             });
       }
+    edit(req,res,next){
+        euro.findById(req.params.id).lean()
+            .then(euro => res.render('course/update',{euro}))
+            .catch(next);
+    }
+
+    update(req,res,next){
+        euro.updateOne({_id: req.params.id},req.body)
+            .then(() => res.redirect('/admin/Stored-db'))
+            .catch(next);
+        }
 }
 
 module.exports = new NewsController;
