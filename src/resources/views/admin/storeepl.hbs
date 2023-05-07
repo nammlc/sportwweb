@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trang quản trị nội dung</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Trang quản trị nội dung</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Trang chủ</a></li>
+          <li><a href="http://localhost:3000/admin/create">Đăng bài mới</a></li>
+          <li><a href="http://localhost:3000/admin/stored-main">Nội dung trang chủ</a></li>
+          <li><a href="http://localhost:3000/admin/stored-c1">Bài báo Champion League</a></li>
+          <li><a href="http://localhost:3000/admin/stored-euro">Bài báo Euro</a></li>
+          <li><a href="http://localhost:3000/admin/stored-epl">Bài báo Epl</a></li>
+          <li><a href="http://localhost:3000/admin/stored-laliga">Bài báo Laliga</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:  #e5e5e5; border : none ;">
+                Quản lý nội dung
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="http://localhost:3000/admin/stored-main">Nội dung trang chủ</a></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/admin/stored-c1">Nội dung Champion League</a></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/admin/stored-epl">Nội dung Epl</a></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/admin/stored-euro">Nội dung Euro</a></li>
+                <li><a class="dropdown-item" href="http://localhost:3000/admin/stored-laliga">Nội dung Laliga</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li style="margin-left: 12px;"><a href="#">Quản lý người dùng</a></li>
+          <li style="margin-left: 12px;"><a href="#">Thống kê</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <h2>Các bài viết</h2>
+        <table class="table" style="color: rgb(36, 38, 41);">
+        <thead>
+            <tr>
+            <th scope="col" style="color: rgb(36, 38, 41)">STT</th>
+            <th scope="col" style="color: rgb(36, 38, 41)">Tên</th>
+            <th scope="col" style=" color: rgb(36, 38, 41)">Ảnh</th>
+            <th scope="col" style=" color: rgb(36, 38, 41)">Tóm tắt</th>
+            <th style=" color: rgb(36, 38, 41) ">Chỉnh sửa</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each epl}}
+            <tr>
+            <th scope="row" style="color: black;">{{ sum @index 1}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.img1}}</td>
+            <td>{{this.summary}}</td>
+            <td>
+                <a href="/euro/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
+                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal" data-id="{{this._id}}">Xóa</a>
+            </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table> 
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2023</p>
+    </div>
+
+    <!-- confirm  delete -->
+    <!--  -->
+
+    <div id="delete-course-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Bạn chắc chắn muốn xóa bài viết này ?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button id="btn-delete-c1" type="button" class="btn btn-danger">Xóa</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <form name="delete-form" method="post">
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            var c1Id;
+            var btnDeleteC1 = document.getElementById('btn-delete-c1');
+            var deleteForm = document.forms['delete-form'];
+
+            $('#delete-course-modal').on('show.bs.modal',function(event){
+                var button = $(event.relatedTarget);
+                c1Id = button.data('id');
+            });
+
+        
+        btnDeleteC1.onclick = function(){
+            deleteForm.action = '/c1/'+ c1Id + '?_method=DELETE';
+            deleteForm.submit();
+        }
+        });
+</script>
+  </body>
+</html>

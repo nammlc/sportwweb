@@ -11,6 +11,8 @@ router.get('/:id/edit',C1Controller.edit);
 
 router.put('/:id',C1Controller.update);
 
+router.delete('/:id',C1Controller.delete);
+
 router.get('/:slug',C1Controller.render);
 
 module.exports = router;
