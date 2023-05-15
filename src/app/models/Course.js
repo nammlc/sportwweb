@@ -12,7 +12,7 @@ const Course = new Schema({
     image : {type : String},
     phara : {type: String},
     summary : {type : String},
-    slug : {type : String, slug:'name',},
+    slug : {type : String, slug:'name', unique: true},
     createdAt: {type: Date, default: Date.now},
     
 },{

@@ -15,7 +15,8 @@ const euros = new Schema({
     img1 :{type: String},
     img2 :{type: String},
     img3 :{type: String},
-    slug : {type : String, slug : 'name'},
+    slug : {type : String, slug : 'name', unique :true},
+
 },{
     timestamps: true,
 })

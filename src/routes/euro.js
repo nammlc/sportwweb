@@ -7,9 +7,11 @@ router.get('/Euro',EuroController.show);
 
 router.post('/store',EuroController.store);
 
-router.get('/edit',EuroController.edit);
+router.get('/:id/edit',EuroController.edit);
 
-router.put('/update',EuroController.update);
+router.put('/:id',EuroController.update);
+
+router.delete('/:id',EuroController.delete);
 
 router.get('/:slug', EuroController.render);
 

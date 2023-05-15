@@ -24,16 +24,25 @@ class NewsController {
             });
       }
     edit(req,res,next){
-        euro.findById(req.params.id).lean()
-            .then(euro => res.render('course/update',{euro}))
+        Euro.findById(req.params.id).lean()
+            .then(euro => res.render('admin/editeuro',{
+                euro: euro,
+                layout: 'admin'
+            }))
             .catch(next);
     }
 
     update(req,res,next){
-        euro.updateOne({_id: req.params.id},req.body)
-            .then(() => res.redirect('/admin/Stored-db'))
+        Euro.updateOne({_id: req.params.id},req.body).lean()
+            .then(() => res.redirect('/admin/stored-euro'))
             .catch(next);
         }
+    
+    delete(req,res,next){
+        Euro.deleteOne( {_id: req.params.id})
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
 }
 
 module.exports = new NewsController;

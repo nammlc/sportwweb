@@ -65,6 +65,8 @@
             <td>
                 <a href="/euro/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
                 <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal" data-id="{{this._id}}">Xóa</a>
+                <a href="/euro/{{this.slug}}" class="btn btn-primary">Xem bài viết</a>
+
             </td>
             </tr>
             {{/each}}
@@ -92,7 +94,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button id="btn-delete-c1" type="button" class="btn btn-danger">Xóa</button>
+            <button id="btn-delete-euro" type="button" class="btn btn-danger">Xóa</button>
         </div>
         </div>
     </div>
@@ -103,18 +105,18 @@
 
     <script>
         document.addEventListener("DOMContentLoaded",function(){
-            var c1Id;
-            var btnDeleteC1 = document.getElementById('btn-delete-c1');
+            var euroId;
+            var btnDeleteeuro = document.getElementById('btn-delete-euro');
             var deleteForm = document.forms['delete-form'];
 
             $('#delete-course-modal').on('show.bs.modal',function(event){
                 var button = $(event.relatedTarget);
-                c1Id = button.data('id');
+                euroId = button.data('id');
             });
 
         
-        btnDeleteC1.onclick = function(){
-            deleteForm.action = '/c1/'+ c1Id + '?_method=DELETE';
+        btnDeleteeuro.onclick = function(){
+            deleteForm.action = '/euro/'+ euroId + '?_method=DELETE';
             deleteForm.submit();
         }
         });

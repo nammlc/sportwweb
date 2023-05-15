@@ -77,3 +77,15 @@ tr:nth-child(even) {
   color: #fff;
   padding: 20px;
   text-align: center; }
+
+table td:nth-child(3) {
+  width: 50px; }
+
+table td:nth-child(2) {
+  width: auto; }
+
+table td:last-child {
+  width: 250px; }
+
+table tr {
+  height: 50px; }

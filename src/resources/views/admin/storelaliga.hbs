@@ -63,8 +63,10 @@
             <td>{{this.img1}}</td>
             <td>{{this.summary}}</td>
             <td>
-                <a href="/euro/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
+                <a href="/laliga/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
                 <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal" data-id="{{this._id}}">Xóa</a>
+                <a href="/laliga/{{this.slug}}" class="btn btn-primary">Xem bài viết</a>
+
             </td>
             </tr>
             {{/each}}
@@ -114,7 +116,7 @@
 
         
         btnDeleteC1.onclick = function(){
-            deleteForm.action = '/c1/'+ c1Id + '?_method=DELETE';
+            deleteForm.action = '/laliga/'+ c1Id + '?_method=DELETE';
             deleteForm.submit();
         }
         });

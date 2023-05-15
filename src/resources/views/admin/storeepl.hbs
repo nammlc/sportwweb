@@ -63,8 +63,10 @@
             <td>{{this.img1}}</td>
             <td>{{this.summary}}</td>
             <td>
-                <a href="/euro/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
+                <a href="/epl/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
                 <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal" data-id="{{this._id}}">Xóa</a>
+                <a href="/epl/{{this.slug}}" class="btn btn-primary">Xem bài viết</a>
+
             </td>
             </tr>
             {{/each}}
@@ -92,7 +94,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button id="btn-delete-c1" type="button" class="btn btn-danger">Xóa</button>
+            <button id="btn-delete-epl" type="button" class="btn btn-danger">Xóa</button>
         </div>
         </div>
     </div>
@@ -103,21 +105,21 @@
 
     <script>
         document.addEventListener("DOMContentLoaded",function(){
-            var c1Id;
-            var btnDeleteC1 = document.getElementById('btn-delete-c1');
+            var eplId;
+            var btnDeleteepl = document.getElementById('btn-delete-epl');
             var deleteForm = document.forms['delete-form'];
 
             $('#delete-course-modal').on('show.bs.modal',function(event){
                 var button = $(event.relatedTarget);
-                c1Id = button.data('id');
+                eplId = button.data('id');
             });
 
         
-        btnDeleteC1.onclick = function(){
-            deleteForm.action = '/c1/'+ c1Id + '?_method=DELETE';
+        btnDeleteepl.onclick = function(){
+            deleteForm.action = '/epl/'+ eplId + '?_method=DELETE';
             deleteForm.submit();
         }
         });
-</script>
+    </script>
   </body>
 </html>

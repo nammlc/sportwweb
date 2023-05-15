@@ -60,3 +60,6 @@ body {
 .special_line {
   font-size: 1.4rem;
   color: #2e57a8; }
+
+table td:nth-child(3) {
+  width: 50px; }

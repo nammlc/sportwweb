@@ -10,5 +10,5 @@ if(images){
 
     }
 
-    setInterval(nextImage, 3000);
+    setInterval(nextImage, 5000);
 }

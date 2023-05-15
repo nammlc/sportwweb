@@ -27,7 +27,10 @@ class NewsController {
     
     edit(req,res,next){
         c1.findById(req.params.id).lean()
-            .then(c1 => res.render('./course/update',{c1}))
+            .then(c1 => res.render('admin/editc1',{
+                c1: c1,
+                layout: 'admin'
+            }))
             .catch(next);
     }
 

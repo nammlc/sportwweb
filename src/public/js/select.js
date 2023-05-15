@@ -2,7 +2,6 @@ const select = document.getElementById('select');
 const form = document.getElementById('form-create');
 select.addEventListener('change',function(){
     const selectOptition = select.value;
-    console.log(selectOptition);
     form.innerHTML = `
         <form action="/${selectOptition}/store" method="post">
 
@@ -95,8 +94,10 @@ select.addEventListener('change',function(){
         const valuename = namee.value;
         const valueimg1 = img1.value;
         const valuesummary = summary.value;
-        if(valueimg1 == '' || valuename == '' || valuephara == '' || valuesummary == ''){
-            alert("Fill full site before submit");}
+        if(valueimg1 == '' || valuename == '' || valuephara == '' || valuesummary == ''|| valuename.length < 10){
+            alert("Fill full site before submit");
+            checkSubmit.setAttribute("type","button");
+        }
         else{
             errorsubmit.innerHTML = ""; 
             checkSubmit.setAttribute("type","submit");

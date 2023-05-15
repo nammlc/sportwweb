@@ -194,7 +194,7 @@
 
 .nam_slider__name{
     font-size: 4rem;
-    color: #b5b7bb;
+    color: rgb(43, 104, 226);
 }
 
 .sign-in__sign-out{
@@ -395,6 +395,7 @@ input[ type=text], input[type=password], input[type=email]{
 
 .nam_new-hot__header--img{
     width: 1000px;
+    height: 500px;
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 100%;
@@ -959,6 +960,8 @@ input[ type=text], input[type=password], input[type=email]{
     color: #fff;
     font-weight: 400;
     list-style: upper-alpha;
+    padding: 10px;
+    border-bottom: 1px solid #326ce0;
 }
 
 .news-page-phara{
@@ -1126,17 +1129,19 @@ input[ type=text], input[type=password], input[type=email]{
 
 .other-content{
     margin: 20px;
-    color: #fff;
+    color: #242121;
     font-size: 3.5rem;
 }
 
 .other-content--link{
-
+    list-style: none;
 }
 
 .other-content--list{
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
+
 }
 
 .other-content--list li{

@@ -60,11 +60,13 @@
             <tr>
             <th scope="row" style="color: black;">{{ sum @index 1}}</th>
             <td>{{this.name}}</td>
-            <td>{{this.img1}}</td>
+            <td >{{this.img1}}</td>
             <td>{{this.summary}}</td>
             <td>
                 <a href="/c1/{{this._id}}/edit" class="btn btn-primary">Sửa</a>
                 <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal" data-id="{{this._id}}">Xóa</a>
+                <a href="/c1/{{this.slug}}" class="btn btn-primary">Xem bài viết</a>
+
             </td>
             </tr>
             {{/each}}
@@ -81,21 +83,21 @@
     <!--  -->
 
     <div id="delete-course-modal" class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Xác nhận</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <p>Bạn chắc chắn muốn xóa bài viết này ?</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button id="btn-delete-c1" type="button" class="btn btn-danger">Xóa</button>
-        </div>
-        </div>
-    </div>
+      <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Xác nhận</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Bạn chắc chắn muốn xóa bài viết này ?</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              <button id="btn-delete-c1" type="button" class="btn btn-danger">Xóa</button>
+          </div>
+          </div>
+      </div>
     </div>
 
     <form name="delete-form" method="post">

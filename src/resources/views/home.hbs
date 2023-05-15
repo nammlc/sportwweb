@@ -6,7 +6,7 @@
             <div class="col-11" style="display :flex">
                 <div class="nam_app">
                     <div class="nam_container_web">
-                        <div class="nam_grid">
+                        <div class="nam_grid" style=" background-color :rgba(240, 248, 255, 0.8)">
                             <div class="nam_grid__row">
                                 <div class="nam_middle" style="display: flex;">
                                     <div class="nam_left">
@@ -216,14 +216,14 @@
                             </div>
                             <div class="nam_grid__row">
                                 <div class="nam_grid__column-8" style="display: flex ; flex-wrap : wrap">
-                                    {{#each course}}
-                                    <a href="/courses/{{this.slug}}" style="text-decoration: none; color:black">
+                                    {{#each courses}}
+                                    <a href="/home/{{this.slug}}" style="text-decoration: none; color:black">
                                         <div class="card" style="width: 31% ; margin : 5px 20px 5px 0">
                                             <img src="{{this.image1}}" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title" style="font-size:1.4rem">{{this.name}}</h5>
                                                 <p class="card-text">{{this.summary}}</p>
-                                                <a href="/courses/{{this.slug}}" class="btn btn-primary" style=" font-size: 1.5rem">Xem bài viết</a>
+                                                <a href="/home/{{this.slug}}" class="btn btn-primary" style=" font-size: 1.5rem">Xem bài viết</a>
                                             </div>
                                         </div>
                                     </a>

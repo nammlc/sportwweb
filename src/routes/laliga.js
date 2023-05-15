@@ -7,11 +7,12 @@ router.get('/Laliga',LaligaController.show);
 
 router.post('/store',LaligaController.store);
 
-router.get('/edit',LaligaController.edit);
+router.get('/:id/edit',LaligaController.edit);
 
-router.put('/update',LaligaController.update);
+router.put('/:id',LaligaController.update);
+
+router.delete('/:id',LaligaController.delete);
 
 router.get('/:slug', LaligaController.render);
-
 
 module.exports = router;

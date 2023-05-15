@@ -7,9 +7,12 @@ router.get('/Epl', EplController.show);
 
 router.post('/store',EplController.store);
 
-router.get('/edit',EplController.edit);
+router.get('/:id/edit',EplController.edit);
 
-router.put('/update',EplController.update);
+router.put('/:id',EplController.update);
+
+router.delete('/:id',EplController.delete);
+
 
 router.get('/:slug',EplController.render);
 
