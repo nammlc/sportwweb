@@ -1,8 +1,7 @@
-const admin = document.getElementById('admin')
+function load(){
+    alert('load');
+}
 
-admin.addEventListener('click',function(){
-    alert("This site belongs to admin");
+window.addEventListener('load',() => {
+    load();
 })
-
-
-//name
